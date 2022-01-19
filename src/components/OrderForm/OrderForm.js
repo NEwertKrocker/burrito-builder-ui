@@ -14,6 +14,13 @@ class OrderForm extends Component {
     this.setState({ name: e.target.value })
   }
 
+  handleIngredientChange = e => {
+    e.preventDefault();
+    if(!this.state.ingredients.includes(e.target.name)){
+      let newIngredient = e.target.name;
+      this.setState({ ingredients: [...this.state.ingredients, newIngredient] })
+    }
+  }
 
   handleSubmit = e => {
     e.preventDefault();
