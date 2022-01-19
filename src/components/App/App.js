@@ -14,7 +14,7 @@ class App extends Component {
 
   addNewOrder = (order) => {
     postOrder(order)
-    this.setState({ orders: [...this.state.orders, order]})
+      .then(data => this.setState({ orders: [...this.state.orders, data]}))
   }
 
   componentDidMount() {
