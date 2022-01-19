@@ -11,6 +11,7 @@ const Orders = props => {
             return <li>{ingredient}</li>
           })}
         </ul>
+        <button className='delete-btn'>Delete 🌯  ➡️  🗑 </button>
       </div>
     )
   });
